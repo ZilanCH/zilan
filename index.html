@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Digitale Kundenkarte</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ihre Digitale Kundenkarte</h1>
+
+        <div id="barcodeDisplay" class="card-section">
+            <p>Ihre Kundenkarten-ID:</p>
+            <p id="loyaltyId" class="id-text">Lade...</p>
+            <img id="barcodeImage" src="placeholder_barcode.png" alt="Ihr Barcode" class="barcode-img">
+            <small class="instruction">Zeigen Sie diesen Code an der Kasse vor.</small>
+        </div>
+
+        <div class="points-section card-section">
+            <p>Ihr aktueller Punktestand:</p>
+            <p><span id="currentPoints" class="points-value">0</span> Punkte</p>
+        </div>
+
+        <p class="info-text">
+            <small>Um Punkte zu sammeln oder einzulösen, scannen Sie Ihre Karte an der Kasse.</small>
+        </p>
+
+        <div id="messageDisplay" class="message" style="display: none;"></div>
+    </div>
+
+    <script src="js/kundenkarte.js"></script>
+</body>
+</html>
