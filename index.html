@@ -3,32 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Digitale Kundenkarte</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>TTH-Projects - Home</title>
+    <link rel="stylesheet" href="css/style.css"> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Ihre Digitale Kundenkarte</h1>
 
-        <div id="barcodeDisplay" class="card-section">
-            <p>Ihre Kundenkarten-ID:</p>
-            <p id="loyaltyId" class="id-text">Lade...</p>
-            <img id="barcodeImage" src="placeholder_barcode.png" alt="Ihr Barcode" class="barcode-img">
-            <small class="instruction">Zeigen Sie diesen Code an der Kasse vor.</small>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.webp" alt="TTH-Projects Logo" class="header-logo">
+                <span class="header-logo-text">TTH-Projects</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="points-section card-section">
-            <p>Ihr aktueller Punktestand:</p>
-            <p><span id="currentPoints" class="points-value">0</span> Punkte</p>
-        </div>
+    <main class="page-content">
 
-        <p class="info-text">
-            <small>Um Punkte zu sammeln oder einzulösen, scannen Sie Ihre Karte an der Kasse.</small>
-        </p>
+        <section class="hero-section">
+            <h1>Willkommen in der Welt von TTH-Projects!</h1>
+            <p class="tagline">Wo Kreativität und Code zu einzigartigen Spielerlebnissen verschmelzen.</p>
+            <p>Wir sind eine ambitionierte Gaming-Projektgruppe, die sich der Entwicklung fesselnder Spiele und innovativer digitaler Anwendungen widmet. Tauchen Sie ein in unsere Projekte und entdecken Sie, was uns antreibt!</p>
+            <a href="projekte.html" class="cta-button">Entdecken Sie unsere Projekte</a>
+        </section>
 
-        <div id="messageDisplay" class="message" style="display: none;"></div>
-    </div>
+        <section class="section-divider">
+            <h2>Was uns auszeichnet</h2>
+        </section>
 
-    <script src="js/kundenkarte.js"></script>
-</body>
+        <section class="features-grid">
+            <div class="feature-item">
+                <img src="img/icon_innovation.webp" alt="Innovation Icon" class="feature-icon">
+                <h3>Innovation</h3>
+                <p>Wir experimentieren stets mit neuen Ideen und Technologien, um frische Impulse in die Gaming-Welt zu bringen.</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/icon_community.webp" alt="Community Icon" class="feature-icon">
+                <h3>Community-Driven</h3>
+                <p>Ihr Feedback ist uns wichtig! Wir entwickeln mit und für unsere Spieler, um das bestmögliche Erlebnis zu gewährleisten.</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/icon_quality.webp" alt="Quality Icon" class="feature-icon">
+                <h3>Leidenschaft & Qualität</h3>
+                <p>Jedes Projekt wird mit Herzblut und dem höchsten Anspruch an Qualität umgesetzt, von der ersten Skizze bis zum finalen Release.</p>
+            </div>
+        </section>
+
+        <section class="call-to-action-bottom">
+            <h2>Bereit, die Zukunft des Gamings zu erleben?</h2>
+            <p>Begleiten Sie TTH-Projects auf unserer Reise. Werden Sie Teil unserer wachsenden Community und verpassen Sie keine Neuigkeit!</p>
+            <a href="kontakt.html" class="cta-button secondary-cta">Kontaktieren Sie uns</a>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script> </body>
 </html>
