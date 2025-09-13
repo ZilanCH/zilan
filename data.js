@@ -9,6 +9,7 @@ const data = {
         { name: "Miyako", link: "https://miyako.zilan.dev", img: "img/miyako.jpg" },
         { name: "Drakurim", link: "https://drakurim.zilan.dev", img: "img/drakurim.jpg" }, 
         { name: "GitHub", link: "https://github.com/zilanch", img: "img/discord.webp" },
-        { name: "S4riX", link: "https://s4rix.zilan.dev", img: "img/s4rix.png" }
+        { name: "S4riX", link: "https://s4rix.zilan.dev", img: "img/s4rix.png" },
+        { name: "Theredstonee-Projects", link: "https://www.theredstonee.de" }
     ]
 };
