@@ -3,7 +3,7 @@ const data = {
     news: [
         { date: "12.09.2025", title: "WebV1 - ZilanDEV", content: "Wir haben die Webseite aufgesetzt :D" },
         { date: "2.10.2025", title: "ZilanOS", content: "Wir haben mit der Entwicklung von ZilanOS begonnen."},
-        { date: "21.10.2025", title: "WebV2 - ZilanDEV", content: "Grösser, besser, schneller! Die WebV2 ist da! Wir sind stetig dabei, sie weiterzuentwickeln, um bald die WebV3 zu präsentieren!" },
+        { date: "21.10.2025", title: "WebV2 - ZilanDEV", content: "Grösser, besser, schneller! Die WebV2 ist da! Wir sind stetig dabei, sie weiterzuentwickeln, um bald die WebV3 zu präsentieren!" }
 
     ],
     links: [
