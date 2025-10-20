@@ -1,11 +1,7 @@
-// Rendering und Event-Logik aus index.html ausgelagert
-
-// Render Über uns
 if (document.getElementById("about-text")) {
     document.getElementById("about-text").textContent = data.about;
 }
 
-// Render News
 const newsContainer = document.getElementById("news-container");
 if (newsContainer && data.news) {
     data.news.forEach(n => {
@@ -20,7 +16,6 @@ if (newsContainer && data.news) {
     });
 }
 
-// Render Downloads aus files.json
 const fileList = document.getElementById("file-list");
 if (fileList) {
     fetch("download/files.json")
@@ -44,7 +39,6 @@ if (fileList) {
                     const originalText = btn.textContent;
                     btn.textContent = 'Wird heruntergeladen...';
                     btn.disabled = true;
-                    // Download per unsichtbarem Link
                     const a = document.createElement('a');
                     a.href = 'download/' + filename;
                     a.download = filename;
@@ -58,13 +52,11 @@ if (fileList) {
                             btn.disabled = false;
                         }, 1500);
                     }, 1000);
-                    console.log(`Downloading: ${filename}`);
                 });
             });
         });
 }
 
-// Render Links
 const linkList = document.getElementById("link-list");
 if (linkList && data.links) {
     data.links.forEach(l => {
@@ -80,7 +72,6 @@ if (linkList && data.links) {
     });
 }
 
-// Smooth Scrolling
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

@@ -1,4 +1,3 @@
-// Daten aus index.html ausgelagert
 const data = {
     about: "Wir sind ZilanDEV, eine Gaming-Community und Entwicklergruppe, die sich leidenschaftlich für die Erstellung von hochwertigen Softwarelösungen einsetzt. Unser Ziel ist es, innovative und unterhaltsame Erlebnisse zu schaffen, die Menschen weltweit begeistern.",
     news: [
