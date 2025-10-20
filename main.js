@@ -80,9 +80,8 @@ if (linkList && data.links) {
     });
 }
 
-// Smooth Scrolling and Theme Init
+// Smooth Scrolling
 window.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -95,21 +94,4 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Simplified theme implementation
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    // Set initial theme
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', currentTheme);
-    themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
-    
-    // Theme toggle handler
-    themeToggle.onclick = () => {
-        const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', newTheme);
-        themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
-        localStorage.setItem('theme', newTheme);
-    };
 });

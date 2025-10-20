@@ -237,74 +237,16 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Smooth transitions for theme changes */
-html, body, header, .section, .news-item, .file-item, footer, nav a {
-    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* Theme overrides using data-theme on <html> */
-[data-theme="light"] body {
-    background: linear-gradient(135deg, #ffffff 0%, #f4f7fc 50%, #e9eef9 100%);
-    color: #0e1726;
-}
-[data-theme="light"] header {
-    background: rgba(0, 0, 0, 0.03);
-    backdrop-filter: none;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-[data-theme="light"] .section,
-[data-theme="light"] .description-section {
-    background: rgba(14, 23, 38, 0.03);
-    border: 1px solid rgba(0,0,0,0.06);
-}
-[data-theme="light"] .news-item,
-[data-theme="light"] .file-item,
-[data-theme="light"] .link-item {
-    background: rgba(14,23,38,0.02);
-}
-[data-theme="light"] nav a {
-    color: #0e1726;
-}
-[data-theme="light"] .news-date,
-[data-theme="light"] .file-meta {
-    color: #0077b6;
-}
-[data-theme="light"] .logo {
-    background: linear-gradient(45deg, #0077b6, #00b4d8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-[data-theme="light"] footer {
-    background: rgba(255,255,255,0.7);
-    color: #0e1726;
-    border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-/* Theme toggle button styling */
-.theme-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    background: linear-gradient(45deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #fff;
-    padding: 0.45rem 0.6rem;
-    border-radius: 999px;
-    cursor: pointer;
-    font-size: 1rem;
-    line-height: 1;
-    min-width: 44px;
-}
-.theme-toggle[aria-pressed="true"] {
-    box-shadow: 0 6px 18px rgba(0,212,255,0.15);
-    transform: translateY(-1px);
-}
-
-/* Light-mode adjustments for the toggle */
-[data-theme="light"] .theme-toggle {
-    background: linear-gradient(45deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
-    border: 1px solid rgba(0,0,0,0.06);
-    color: #0e1726;
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
