@@ -2,7 +2,9 @@ const data = {
     about: "Wir sind ZilanDEV, eine Gaming-Community und Entwicklergruppe, die sich leidenschaftlich für die Erstellung von hochwertigen Softwarelösungen einsetzt. Unser Ziel ist es, innovative und unterhaltsame Erlebnisse zu schaffen, die Menschen weltweit begeistern.",
     news: [
         { date: "12.09.2025", title: "WebV1 - ZilanDEV", content: "Wir haben die Webseite aufgesetzt :D" },
-        { date: "2.10.2025", title: "ZilanOS", content: "Wir haben mit der Entwicklung von ZilanOS begonnen." }
+        { date: "2.10.2025", title: "ZilanOS", content: "Wir haben mit der Entwicklung von ZilanOS begonnen."},
+        { date: "21.10.2025", title: "WebV2 - ZilanDEV", content: "Grösser, besser, schneller! Die WebV2 ist da! Wir sind stetig dabei, sie weiterzuentwickeln, um bald die WebV3 zu präsentieren!" },
+
     ],
     links: [
         { name: "Discord", link: "https://dc.tth-projects.de", img: "img/discord.webp" },
