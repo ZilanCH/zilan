@@ -95,3 +95,51 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* Theme initialization and toggle */
+(function () {
+    const STORAGE_KEY = 'site-theme';
+    const root = document.documentElement;
+    const btn = () => document.getElementById('theme-toggle');
+
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        const b = btn();
+        if (b) {
+            b.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+            b.textContent = theme === 'dark' ? '🌙' : '☀️';
+            b.title = theme === 'dark' ? 'Wechsel zu Hellmodus' : 'Wechsel zu Dunkelmodus';
+        }
+    }
+
+    function loadTheme() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'light' || saved === 'dark') return saved;
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return prefersDark ? 'dark' : 'light';
+    }
+
+    // apply on load
+    applyTheme(loadTheme());
+
+    // attach toggle
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (target && target.id === 'theme-toggle') {
+            const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem(STORAGE_KEY, next);
+        }
+    });
+
+    // respond to system preference changes when no explicit choice stored
+    if (window.matchMedia) {
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        mq.addEventListener && mq.addEventListener('change', (e) => {
+            if (!localStorage.getItem(STORAGE_KEY)) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+})();
