@@ -96,39 +96,20 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Theme initialization
-    const STORAGE_KEY = 'site-theme';
-    const root = document.documentElement;
+    // Simplified theme implementation
     const themeToggle = document.getElementById('theme-toggle');
-
-    function applyTheme(theme) {
-        root.setAttribute('data-theme', theme);
-        if (themeToggle) {
-            themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-            themeToggle.textContent = theme === 'dark' ? '🌙' : '☀️';
-            themeToggle.title = theme === 'dark' ? 'Wechsel zu Hellmodus' : 'Wechsel zu Dunkelmodus';
-        }
-    }
-
-    // Load saved theme or system preference
-    const savedTheme = localStorage.getItem(STORAGE_KEY);
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-    applyTheme(initialTheme);
-
-    // Theme toggle click handler
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            applyTheme(newTheme);
-            localStorage.setItem(STORAGE_KEY, newTheme);
-        });
-    }
-
-    // System theme change handler
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem(STORAGE_KEY)) {
-            applyTheme(e.matches ? 'dark' : 'light');
-        }
-    });
+    const html = document.documentElement;
+    
+    // Set initial theme
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+    
+    // Theme toggle handler
+    themeToggle.onclick = () => {
+        const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+        localStorage.setItem('theme', newTheme);
+    };
 });
