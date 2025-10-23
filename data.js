@@ -49,10 +49,11 @@ export const config = {
     pages: [
         { friendlyName: "Start", url: "index.html", imagePath: "img/zilan_logo.webp", icon: "🏠" },
         { friendlyName: "Miyako's Seite", url: "https://miyako.zilan.dev", imagePath: "img/miyako.webp", icon: "ℹ️" },
+        { friendlyName: "Drakurim's Seite", url: "https://drakurim.zilan.dev", imagePath: "", icon: "🎮" },
         { friendlyName: "S4riX/Sarikaze's Seite", url: "https://s4rix.zilan.dev", imagePath: "img/s4rix.webp", icon: "💼" },
-        { friendlyName: "Discord", url: "https://dc.tth-projects.de", imagePath: "img/discord.webp", icon: "✉️" },
+        { friendlyName: "Discord", url: "https://dc.tth-projects.de", imagePath: "img/zilan_logo.webp", icon: "✉️" },
         { friendlyName: "WebV2", url: "zilanv2/index.html", imagePath: "", icon: "🌐"  },
-        { friendlyName: "Kontakt", url: "kontakt.html", imagePath: "img/contact.webp", icon: "📞" }
+        { friendlyName: "Kontakt", url: "kontakt.html", imagePath: "img/discord.webp", icon: "📞" }
     ],
     
     // Footer
@@ -65,18 +66,11 @@ export const config = {
     contactPage: {
         title: "Kontakt",
         subtitle: "Wir freuen uns auf Ihre Nachricht",
-        officeAddress: "Hauptsitz ZilanGroup",
+        officeAddress: "Schützengasse 13, 9410 Heiden",
         contactInfo: {
             email: "miyako@zilan.dev",
             phone: "+41 77 266 05 11",
-            address: "Appenzell, Schweiz"
-        },
-        formFields: {
-            nameLabel: "Ihr Name",
-            emailLabel: "Ihre E-Mail",
-            subjectLabel: "Betreff",
-            messageLabel: "Ihre Nachricht",
-            submitButton: "Nachricht senden"
+            address: "Schützengasse 13, 9410 Heiden"
         }
     }
 };

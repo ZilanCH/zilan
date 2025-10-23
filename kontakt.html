@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - ZilanGroup</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-header {
+            background: linear-gradient(135deg, #550086 0%, #1d0139 100%);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .contact-content {
+            flex: 1;
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-info-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-info-card h3 {
+            color: #550086;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .info-icon {
+            font-size: 1.5em;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #550086 0%, #1d0139 100%);
+            color: white;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            flex: 1;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #666;
+        }
+
+        .info-value a {
+            color: #550086;
+            text-decoration: none;
+        }
+
+        .info-value a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-form-card h3 {
+            color: #550086;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #550086;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, #550086 0%, #1d0139 100%);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(85, 0, 134, 0.3);
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(85, 0, 134, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-header h1 {
+                font-size: 2em;
+            }
+
+            .contact-info-card,
+            .contact-form-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+    <!-- Header mit Navigation -->
+    <header>
+        <div class="container">
+            <div id="headerLogo" class="header-logo"></div>
+            <div class="header-title-group">
+                <h1 id="companyName">ZilanGroup</h1>
+                <p class="tagline" id="tagline">Wissen, was Sache ist!</p>
+            </div>
+            <nav class="site-nav">
+                <button id="burgerButton" class="burger-button" aria-label="Menü" aria-expanded="false">
+                    <span class="burger-bars"></span>
+                </button>
+                <div id="popoutMenu" class="popout-menu" aria-hidden="true">
+                    <div class="popout-inner">
+                        <ul id="navList" class="nav-list"></ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Kontakt Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1 id="contactTitle">Kontakt</h1>
+            <p id="contactSubtitle">Wir freuen uns auf Ihre Nachricht</p>
+        </div>
+    </section>
+
+    <!-- Kontakt Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Kontaktinformationen -->
+                <div class="contact-info-card">
+                    <h3 id="officeAddress">Hauptsitz ZilanGroup</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-text">
+                            <div class="info-label">E-Mail</div>
+                            <div class="info-value">
+                                <a href="mailto:miyako@zilan.dev" id="contactEmail">miyako@zilan.dev</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <div class="info-label">Telefon</div>
+                            <div class="info-value">
+                                <a href="tel:+41772660511" id="contactPhone">+41 77 266 05 11</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <div class="info-label">Adresse</div>
+                            <div class="info-value" id="contactAddress">Schützengasse 13, 9410 Heiden</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p id="footerCopyright">© 2025 ZilanGroup</p>
+            <p id="footerContact">Kontakt: miyako@zilan.dev | Tel: +41 77 266 05 11</p>
+        </div>
+    </footer>
+
+    <!-- Externe Skripte bleiben unverändert -->
+	<script type="module" src="data.js"></script>
+	<script type="module" src="main.js"></script>
+</body>
+</html>
