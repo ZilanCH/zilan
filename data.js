@@ -19,6 +19,13 @@ export const config = {
             text: "Das, was Sie hier gerade sehen, ist die Web V3! Wir haben lange an ihr gearbeitet uns sie nun am 23.10.2025 fertiggestellt!",
             imagePath: "",
             imageIcon: "😎"
+        },
+        {
+            layout: "text-left",
+            title: "Datei-Dwonloader",
+            text: "Leider ist unser Datei-Downloader momentan nur in der Web V2 verfügbar. Wir arbeiten jedoch daran, ihn so schnell wie möglich in die Web V3 zu integrieren! Du findest ihn aktuelll noch in der Navigazion unter WebV2.",
+            imagePath: "",
+            imageIcon: "❌"
         }
     ],
     
