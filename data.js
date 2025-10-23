@@ -51,12 +51,32 @@ export const config = {
         { friendlyName: "Miyako's Seite", url: "https://miyako.zilan.dev", imagePath: "img/miyako.webp", icon: "ℹ️" },
         { friendlyName: "S4riX/Sarikaze's Seite", url: "https://s4rix.zilan.dev", imagePath: "img/s4rix.webp", icon: "💼" },
         { friendlyName: "Discord", url: "https://dc.tth-projects.de", imagePath: "img/discord.webp", icon: "✉️" },
-        { friendlyName: "WebV2", url: "zilanv2/index.html", imagePath: "", icon: "🌐"  }
+        { friendlyName: "WebV2", url: "zilanv2/index.html", imagePath: "", icon: "🌐"  },
+        { friendlyName: "Kontakt", url: "kontakt.html", imagePath: "img/contact.webp", icon: "📞" }
     ],
     
     // Footer
     footerYear: 2025,
     footerCompanyName: "ZilanGroup",
     footerEmail: "miyako@zilan.dev",
-    footerPhone: "+41 77 266 05 11"
+    footerPhone: "+41 77 266 05 11",
+    
+    // Contact Page Configuration
+    contactPage: {
+        title: "Kontakt",
+        subtitle: "Wir freuen uns auf Ihre Nachricht",
+        officeAddress: "Hauptsitz ZilanGroup",
+        contactInfo: {
+            email: "miyako@zilan.dev",
+            phone: "+41 77 266 05 11",
+            address: "Appenzell, Schweiz"
+        },
+        formFields: {
+            nameLabel: "Ihr Name",
+            emailLabel: "Ihre E-Mail",
+            subjectLabel: "Betreff",
+            messageLabel: "Ihre Nachricht",
+            submitButton: "Nachricht senden"
+        }
+    }
 };
