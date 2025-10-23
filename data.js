@@ -42,7 +42,7 @@ export const config = {
     pages: [
         { friendlyName: "Start", url: "index.html", imagePath: "img/zilan_logo.webp", icon: "🏠" },
         { friendlyName: "Miyako's Seite", url: "https://miyako.zilan.dev", imagePath: "img/miyako.webp", icon: "ℹ️" },
-        { friendlyName: "S4riX/Sarikaze", url: "https://s4rix.zilan.dev", imagePath: "img/s4rix.webp", icon: "💼" },
+        { friendlyName: "S4riX/Sarikaze's Seite", url: "https://s4rix.zilan.dev", imagePath: "img/s4rix.webp", icon: "💼" },
         { friendlyName: "Discord", url: "https://dc.tth-projects.de", imagePath: "img/discord.webp", icon: "✉️" },
         { friendlyName: "WebV2", url: "zilanv2/index.html", imagePath: "", icon: "🌐"  }
     ],
