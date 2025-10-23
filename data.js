@@ -42,6 +42,11 @@ export const config = {
             logo: "🏢",
             name: "Quantix Tickets Bot",
             description: "Automatisierte Ticketverwaltung steigerte Support-Effizienz um 120%"
+        },
+        {
+            logo: "🎮",
+            name: "ZilanOS",
+            description: "Noch im Development, jedoch bald verfügbar!"
         }
     ],
     
