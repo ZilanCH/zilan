@@ -3,82 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZilanDEV - Homepage</title>
-    <link rel="icon" href="img/zilan_logo.webp" type="image/webp">
+    <title>Ihr Unternehmen - Professionelle Lösungen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">ZilanDEV</div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#downloads">Downloads</a></li>
-                        <li><a href="#links">Links</a></li>
-                        <li><a href="#about">Über uns</a></li>
-                    </ul>
-                </nav>
+            <div class="header-logo" id="headerLogo"></div>
+            <div class="header-title-group">
+                <h1 id="companyName"></h1>
+                <p class="tagline" id="tagline"></p>
             </div>
+
+            <!-- Neue Navigation: Burger rechts oben und PopOut-Menü -->
+            <nav class="site-nav">
+                <button id="burgerButton" class="burger-button" aria-label="Menü öffnen" aria-expanded="false">
+                    <span class="burger-bars" aria-hidden="true"></span>
+                </button>
+
+                <div id="popoutMenu" class="popout-menu" aria-hidden="true">
+                    <div class="popout-inner">
+                        <ul id="navList" class="nav-list">
+                            <!-- main.js füllt hier die Einträge aus config.pages -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="container">
-                <h1>ZilanDEV</h1>
-                <p>ZilanDEV - Wissen, was sache ist!</p>
-                <a href="#downloads" class="cta-button">Entdecken Sie unsere Tools</a>
-            </div>
-        </section>
+    <!-- Content Sections -->
+    <div id="contentSections"></div>
 
+    <!-- CTA Section -->
+    <section class="cta">
         <div class="container">
-            <div class="main-content">
-                <section class="section description-section" id="about">
-                    <h2>
-                        <div class="section-icon">ℹ️</div>
-                        Über uns
-                    </h2>
-                    <p id="about-text"></p>
-                </section>
-
-                <section class="section" id="news">
-                    <h2>
-                        <div class="section-icon">📰</div>
-                        News & Updates
-                    </h2>
-                    <div id="news-container"></div>
-                </section>
-
-                <section class="section" id="downloads">
-                    <h2>
-                        <div class="section-icon">⬇️</div>
-                        Datei-Downloader
-                    </h2>
-                    <div class="file-list" id="file-list"></div>
-                </section>
-
-                <section class="section" id="links">
-                    <h2>
-                        <div class="section-icon">🔗</div>
-                        Wichtige Links
-                    </h2>
-                    <div class="link-list" id="link-list"></div>
-                </section>
-            </div>
+            <h2 id="ctaTitle"></h2>
+            <p id="ctaText"></p>
+            <button class="cta-button" id="ctaButton"></button>
         </div>
-    </main>
+    </section>
 
+    <!-- References Section -->
+    <section class="references">
+        <div class="container">
+            <h2 id="referencesTitle"></h2>
+            <div class="reference-grid" id="referenceGrid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 ZilanDEV. <a href="https://legal.zilan.dev" target="_blank">Rechtliches</a></p>
-            <p>Innovative Softwareentwicklung mit Leidenschaft</p>
+            <p id="footerCopyright"></p>
+            <p style="margin-top: 10px; font-size: 0.9em;" id="footerContact"></p>
+            <a href="https://legal.zilan.dev" target="_blank">Rechtliches</a>
         </div>
     </footer>
 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
