@@ -22,7 +22,7 @@ export const config = {
         },
         {
             layout: "text-left",
-            title: "Datei-Dwonloader",
+            title: "Datei-Downloader",
             text: "Leider ist unser Datei-Downloader momentan nur in der Web V2 verfügbar. Wir arbeiten jedoch daran, ihn so schnell wie möglich in die Web V3 zu integrieren! Du findest ihn aktuelll noch in der Navigazion unter WebV2.",
             imagePath: "",
             imageIcon: "❌"
