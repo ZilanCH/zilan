@@ -47,12 +47,16 @@ export const config = {
             logo: "🎮",
             name: "ZilanOS",
             description: "Noch im Development, jedoch bald verfügbar!"
+        },
+        {
+            logo: "🌐",
+            name: "ZilanLinks",
+            description: "Die kostenlose Alternative zu Linktree!"
         }
     ],
     
     // Neue: Seiten / Navigation (freundlicher Name, Ziel-URL, optionales Bild oder Icon)
     pages: [
-        { friendlyName: "Start", url: "index.html", imagePath: "img/zilan_logo.webp", icon: "🏠" },
         { friendlyName: "Miyako's Seite", url: "https://miyako.zilan.dev", imagePath: "img/miyako.webp", icon: "ℹ️" },
         { friendlyName: "Drakurim's Seite", url: "https://drakurim.zilan.dev", imagePath: "", icon: "🎮" },
         { friendlyName: "S4riX/Sarikaze's Seite", url: "https://s4rix.zilan.dev", imagePath: "img/s4rix.webp", icon: "💼" },
@@ -65,7 +69,7 @@ export const config = {
     // Footer
     footerYear: 2025,
     footerCompanyName: "ZilanGroup",
-    footerEmail: "miyako@zilan.dev",
+    footerEmail: "info@zilan.dev",
     footerPhone: "+41 77 266 05 11",
     
     // Contact Page Configuration
@@ -74,7 +78,7 @@ export const config = {
         subtitle: "Wir freuen uns auf Ihre Nachricht",
         officeAddress: "Schützengasse 13, 9410 Heiden",
         contactInfo: {
-            email: "miyako@zilan.dev",
+            email: "info@zilan.dev",
             phone: "+41 77 266 05 11",
             address: "Schützengasse 13, 9410 Heiden"
         }
